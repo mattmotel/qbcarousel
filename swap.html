@@ -2,10 +2,16 @@
 
 <head>
   <link href="https://fonts.googleapis.com/css?family=Graduate" rel="stylesheet">
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
-  <script type="text/javascript" src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script type="text/javascript" src="js/csi.min.js"></script>
 
+  <script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+  <script type="text/javascript" src="js/jquery.ui.core.js"></script>
+  <script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+  <script type="text/javascript" src="js/jquery.ui.mouse.js"></script>
+  <script type="text/javascript" src="js/jquery.ui.sortable.js"></script>
+  <script type="text/javascript" src="js/jquery.ui.swappable.js"></script>
+
+
+  <script type="text/javascript" src="js/csi.min.js"></script>
 
 
   <link rel="stylesheet" href="css/css.css">
@@ -16,6 +22,7 @@
       height: 300px;
       margin: 40px 0 0 0;
       float: left;
+      cursor: pointer;
     }
 
     .ui-sortable-helper {
@@ -39,6 +46,7 @@
 
     .ui-sortable-helper {
       opacity: .5;
+
     }
   </style>
 
@@ -54,18 +62,21 @@
       $(':nth-child(6) .team', this).addClass("Giants");
       $(':nth-child(7) .team', this).addClass("Eagles");
       $(':nth-child(8) .team', this).addClass("Dolphins");
-
-
     });
 
 
     $(function() {
-      $("#sortable").sortable();
+
+      $("#sortable").swappable({
+        items: '.relative',
+        cursorAt: {
+          top: -10
+        }
+      });
       $("#sortable").disableSelection();
 
 
-
-      $("#sortable").sortable({
+      $("#sortable").swappable({
 
 
         update: function(event, ui) {
@@ -82,6 +93,7 @@
 
         }
       });
+
 
 
     });
@@ -163,7 +175,7 @@
           <div data-include="includes/jersey.svg"></div>
         </div>
         <div class="number">
-          0
+          01
         </div>
       </div>
       <div class="relative X">
@@ -175,20 +187,7 @@
           <div data-include="includes/jersey.svg"></div>
         </div>
         <div class="number">
-          0
-        </div>
-      </div>
-
-      <div class="relative X">
-        <div data-include="includes/player.html"></div>
-        <div class="player-hair ">
-          <div class="hair svg"></div>
-        </div>
-        <div class="team">
-          <div data-include="includes/jersey.svg"></div>
-        </div>
-        <div class="number">
-          0
+          02
         </div>
       </div>
 
@@ -201,7 +200,20 @@
           <div data-include="includes/jersey.svg"></div>
         </div>
         <div class="number">
-          0
+          03
+        </div>
+      </div>
+
+      <div class="relative X">
+        <div data-include="includes/player.html"></div>
+        <div class="player-hair ">
+          <div class="hair svg"></div>
+        </div>
+        <div class="team">
+          <div data-include="includes/jersey.svg"></div>
+        </div>
+        <div class="number">
+          04
         </div>
       </div>
 
