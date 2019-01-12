@@ -1,0 +1,55 @@
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Graduate" rel="stylesheet">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/csi.min.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="css/css.css">
+  <style>
+  .relative{
+    transform: scale(0.5);
+  }
+  </style>
+
+
+  <script>
+    $( function() {
+      $( "#sortable" ).sortable();
+      $( "#sortable" ).disableSelection();
+    } );
+    </script>
+
+
+  <head>
+
+  <body>
+
+
+    <div class="relative">
+
+      <div class="player-body">
+      <div data-include="includes/body.svg"></div>
+      </div>
+
+      <div class="player-hair">
+        <div class="hair svg"></div>
+      </div>
+
+      <div id="team">
+        <div data-include="includes/jersey.svg"></div>
+      </div>
+
+      <div class="number">
+        00
+      </div>
+
+    </div>
+
+
+  </body>
+
+  </html>
