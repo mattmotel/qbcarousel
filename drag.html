@@ -1,4 +1,5 @@
 <html>
+
 <head>
   <link href="https://fonts.googleapis.com/css?family=Graduate" rel="stylesheet">
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -10,46 +11,261 @@
 
   <link rel="stylesheet" href="css/css.css">
   <style>
-  .relative{
-    transform: scale(0.5);
-  }
+    .relative {
+      transform: scale(0.5);
+      width: 200px;
+      height: 300px;
+      margin: 40px 0 0 0;
+      float: left;
+    }
+
+    .ui-sortable-helper {
+      margin: 0;
+    }
+
+    #allteams,
+    #sortable {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    #allteams {
+      z-index: 1;
+    }
+
+    #sortable {
+      z-index: 2;
+    }
+
+    .ui-sortable-helper {
+      opacity: .5;
+    }
   </style>
 
 
   <script>
-    $( function() {
-      $( "#sortable" ).sortable();
-      $( "#sortable" ).disableSelection();
-    } );
-    </script>
+    $(document).ready(function() {
+      $('.team').attr('class', 'team ');
+      $(':nth-child(1) .team', this).addClass("fa");
+      $(':nth-child(2) .team', this).addClass("fa");
+      $(':nth-child(3) .team', this).addClass("fa");
+      $(':nth-child(4) .team', this).addClass("fa");
+      $(':nth-child(5) .team', this).addClass("Broncos");
+      $(':nth-child(6) .team', this).addClass("Giants");
+      $(':nth-child(7) .team', this).addClass("Eagles");
+      $(':nth-child(8) .team', this).addClass("Dolphins");
+
+
+    });
+
+
+    $(function() {
+      $("#sortable").sortable();
+      $("#sortable").disableSelection();
+
+
+
+      $("#sortable").sortable({
+
+
+        update: function(event, ui) {
+          $('.team').attr('class', 'team ');
+          $(':nth-child(1) .team', this).addClass("fa");
+          $(':nth-child(2) .team', this).addClass("fa");
+          $(':nth-child(3) .team', this).addClass("fa");
+          $(':nth-child(4) .team', this).addClass("fa");
+          $(':nth-child(5) .team', this).addClass("Broncos");
+          $(':nth-child(6) .team', this).addClass("Giants");
+          $(':nth-child(7) .team', this).addClass("Eagles");
+          $(':nth-child(8) .team', this).addClass("Dolphins");
+
+
+        }
+      });
+
+
+    });
+  </script>
 
 
   <head>
 
   <body>
 
+    <div id="sortable">
 
-    <div class="relative">
-
-      <div class="player-body">
-      <div data-include="includes/body.svg"></div>
+      <div class="relative Foles">
+        <div class="player-body">
+          <div data-include="includes/body.svg"></div>
+        </div>
+        <div class="player-hair ">
+          <div class="hair svg"></div>
+        </div>
+        <div class="team">
+          <div data-include="includes/jersey.svg"></div>
+        </div>
+        <div class="number">
+          9
+        </div>
       </div>
 
-      <div class="player-hair">
-        <div class="hair svg"></div>
+      <div class="relative Flacco">
+
+        <div class="player-body ">
+          <div data-include="includes/body.svg"></div>
+        </div>
+        <div class="player-hair ">
+          <div class="hair svg"></div>
+        </div>
+        <div class="team">
+          <div data-include="includes/jersey.svg"></div>
+        </div>
+        <div class="number">
+          5
+        </div>
       </div>
 
-      <div id="team">
-        <div data-include="includes/jersey.svg"></div>
+      <div class="relative Taylor">
+        <div class="player-body">
+          <div data-include="includes/body.svg"></div>
+        </div>
+        <div class="player-hair ">
+          <div class="hair svg"></div>
+        </div>
+        <div class="team">
+          <div data-include="includes/jersey.svg"></div>
+        </div>
+        <div class="number">
+          5
+        </div>
       </div>
 
-      <div class="number">
-        00
+      <div class="relative Tannehill">
+        <div data-include="includes/player.html"></div>
+        <div class="player-hair ">
+          <div class="hair svg"></div>
+        </div>
+        <div class="team">
+          <div data-include="includes/jersey.svg"></div>
+        </div>
+        <div class="number">
+          17
+        </div>
       </div>
+
+
+      <div class="relative X">
+        <div data-include="includes/player.html"></div>
+        <div class="player-hair ">
+          <div class="hair svg"></div>
+        </div>
+        <div class="team">
+          <div data-include="includes/jersey.svg"></div>
+        </div>
+        <div class="number">
+          0
+        </div>
+      </div>
+      <div class="relative X">
+        <div data-include="includes/player.html"></div>
+        <div class="player-hair ">
+          <div class="hair svg"></div>
+        </div>
+        <div class="team">
+          <div data-include="includes/jersey.svg"></div>
+        </div>
+        <div class="number">
+          0
+        </div>
+      </div>
+
+      <div class="relative X">
+        <div data-include="includes/player.html"></div>
+        <div class="player-hair ">
+          <div class="hair svg"></div>
+        </div>
+        <div class="team">
+          <div data-include="includes/jersey.svg"></div>
+        </div>
+        <div class="number">
+          0
+        </div>
+      </div>
+
+      <div class="relative X">
+        <div data-include="includes/player.html"></div>
+        <div class="player-hair ">
+          <div class="hair svg"></div>
+        </div>
+        <div class="team">
+          <div data-include="includes/jersey.svg"></div>
+        </div>
+        <div class="number">
+          0
+        </div>
+      </div>
+
+
+
+
+
+
+
 
     </div>
 
 
+
+    <div id="allteams">
+
+      <div class="relative">
+        <div class="fa">
+          <div data-include="includes/jersey.svg"></div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="fa">
+          <div data-include="includes/jersey.svg"></div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="fa">
+          <div data-include="includes/jersey.svg"></div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="fa">
+          <div data-include="includes/jersey.svg"></div>
+        </div>
+      </div>
+
+
+
+      <div class="relative">
+        <div class="broncos">
+          <div data-include="includes/jersey.svg"></div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="giants">
+          <div data-include="includes/jersey.svg"></div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="jaguars">
+          <div data-include="includes/jersey.svg"></div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="dolphins">
+          <div data-include="includes/jersey.svg"></div>
+        </div>
+      </div>
+
+
+
+
   </body>
 
-  </html>
+</html>

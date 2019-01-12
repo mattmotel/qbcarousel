@@ -16,20 +16,18 @@
   top: 268px;
   left: 5px;
   z-index: 2;
- transition: fill 1s;
+  transition: fill 1s;
 }
 
 .hair {
   width: 260px;
   height: 337px;
   position: absolute;
-
   top: -49px;
   left: 50px;
   z-index: 3;
   background-size: 260px 337px;
 }
-
 
 .number {
   font-family: 'Graduate', sans-serif;
@@ -103,12 +101,9 @@ select {
   -webkit-appearance: none;
 }
 
-
-
 .selectors {
   text-align: center;
 }
-
 
 /* players  */
 .Foles .hair {
@@ -122,11 +117,10 @@ select {
 .Flacco .hair {
   background-image: url("../players/hair_flacco.svg");
 }
+
 .Tannehill .hair {
   background-image: url("../players/hair_tannehill.svg");
 }
-
-
 
 .Foles .eyes {
   fill: #5d9aa8;
@@ -161,12 +155,20 @@ select {
 }
 
 /* default team */
-
- .secondary {
+.secondary {
   fill: #444444;
 }
 
- .primary {
+.primary {
+  fill: #666666;
+}
+
+
+.fa .secondary {
+  fill: #444444;
+}
+
+.fa .primary {
   fill: #666666;
 }
 
