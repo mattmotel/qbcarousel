@@ -122,6 +122,10 @@ select {
   background-image: url("../players/hair_tannehill.svg");
 }
 
+.Carr .hair {
+  background-image: url("../players/hair_Carr.svg");
+}
+
 .Foles .eyes {
   fill: #5d9aa8;
 }
@@ -152,6 +156,14 @@ select {
 
 .Taylor .skin {
   fill: #b17147;
+}
+
+.Carr .eyes {
+  fill: #499bce;
+}
+
+.Carr .skin {
+  fill: #edcbbe;
 }
 
 /* default team */
