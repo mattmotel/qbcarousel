@@ -149,6 +149,12 @@ select {
   background-image: url("../players/hair_fitz.svg");
 }
 
+.Dalton .hair {
+  background-image: url("../players/hair_dalton.svg");
+}
+
+
+
 
 
 .Foles .eyes {
@@ -239,6 +245,13 @@ select {
   fill: #edcbbe;
 }
 
+.Dalton .eyes {
+  fill: #499bce;
+}
+
+.Dalton .skin {
+  fill: #edcbbe;
+}
 
 
 /* default team */

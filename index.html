@@ -37,7 +37,6 @@
     #sortable {
       position: absolute;
       top: 0;
-      left: 0;
     }
 
     #allteams {
@@ -116,6 +115,7 @@
       $(':nth-child(9) .team', this).addClass("Buccaneers");
       $(':nth-child(10) .team', this).addClass("Redskins");
       $(':nth-child(11) .team', this).addClass("Raiders");
+      $(':nth-child(12) .team', this).addClass("Bengals");
     });
 
 
@@ -146,6 +146,7 @@
           $(':nth-child(9) .team', this).addClass("Buccaneers");
           $(':nth-child(10) .team', this).addClass("Redskins");
           $(':nth-child(11) .team', this).addClass("Raiders");
+          $(':nth-child(12) .team', this).addClass("Bengals");
 
 
         }
@@ -336,6 +337,21 @@
         </div>
 
 
+        <div class="relative Dalton">
+          <div class="player-tip">Andy Dalton</div>
+          <div data-include="includes/player.html"></div>
+          <div class="player-hair ">
+            <div class="hair svg"></div>
+          </div>
+          <div class="team">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
+          <div class="number">
+            14
+          </div>
+        </div>
+
+
 
 
 
@@ -413,6 +429,13 @@
         <div class="relative">
           <div class="team-tip">Raiders</div>
           <div class="Raiders">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="team-tip">Bengals</div>
+          <div class="Bengals">
             <div data-include="includes/jersey.svg"></div>
           </div>
         </div>
