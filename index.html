@@ -19,6 +19,44 @@
 
   <link rel="stylesheet" href="css/css.css">
   <style>
+    .relative {
+      transform: scale(0.5);
+      width: 200px;
+      height: 300px;
+      margin: 40px 0 0 0;
+      float: left;
+      cursor: pointer;
+    }
+
+    .ui-sortable-helper {
+      margin: 0;
+      opacity: .5;
+    }
+
+    #allteams,
+    #sortable {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    #allteams {
+      z-index: 1;
+    }
+
+    #sortable {
+      z-index: 2;
+    }
+
+
+    .note {
+      font-family: 'Graduate', sans-serif;
+      font-size: 28px;
+      text-align: center;
+      padding-top: 20px;
+    }
+
+
     .team-tip,
     .player-tip {
       font-family: 'Graduate', sans-serif;
@@ -43,44 +81,23 @@
 
     }
 
-    .relative {
-      transform: scale(0.5);
-      width: 200px;
-      height: 300px;
-      margin: 40px 0 0 0;
-      float: left;
-      cursor: pointer;
+    .mobile {
+      display: none;
     }
 
-    .ui-sortable-helper {
-      margin: 0;
-    }
+    @media (max-width: 800px) {
+      .app {
+        display: none;
+      }
 
-    #allteams,
-    #sortable {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    #allteams {
-      z-index: 1;
-    }
-
-    #sortable {
-      z-index: 2;
-    }
-
-    .ui-sortable-helper {
-      opacity: .5;
-
-    }
-
-    .note {
-      font-family: 'Graduate', sans-serif;
-      font-size: 28px;
-      text-align: center;
-      padding-top: 20px;
+      .mobile {
+        font-family: 'Graduate', sans-serif;
+        display: block;
+        padding: 20px;
+        font-size: 40px;
+        background: red;
+        color: white;
+      }
     }
   </style>
 
@@ -143,264 +160,268 @@
   <head>
 
   <body>
-    <div class="note">
-      (Just click and drag QBs around)
+    <div class="mobile">
+      Use your laptop, dumbdumb.
     </div>
-
-
-    <div id="sortable">
-
-      <div class="relative Foles">
-        <div class="player-tip">Nick Foles</div>
-        <div class="player-body">
-          <div data-include="includes/body.svg"></div>
-        </div>
-        <div class="player-hair ">
-          <div class="hair svg"></div>
-        </div>
-        <div class="team">
-          <div data-include="includes/jersey.svg"></div>
-        </div>
-        <div class="number">
-          9
-        </div>
-      </div>
-
-      <div class="relative Flacco">
-        <div class="player-tip">Joe Flacco</div>
-
-        <div class="player-body ">
-          <div data-include="includes/body.svg"></div>
-        </div>
-        <div class="player-hair ">
-          <div class="hair svg"></div>
-        </div>
-        <div class="team">
-          <div data-include="includes/jersey.svg"></div>
-        </div>
-        <div class="number">
-          5
-        </div>
-      </div>
-
-      <div class="relative Taylor">
-        <div class="player-tip">Tyrod Taylor</div>
-        <div class="player-body">
-          <div data-include="includes/body.svg"></div>
-        </div>
-        <div class="player-hair ">
-          <div class="hair svg"></div>
-        </div>
-        <div class="team">
-          <div data-include="includes/jersey.svg"></div>
-        </div>
-        <div class="number">
-          5
-        </div>
+    <div class="app">
+      <div class="note">
+        (Just click and drag QBs around)
       </div>
 
 
-      <div class="relative Fitz">
-        <div class="player-tip">Ryan Fitzpatrick</div>
-        <div data-include="includes/player.html"></div>
-        <div class="player-hair ">
-          <div class="hair svg"></div>
+      <div id="sortable">
+
+        <div class="relative Foles">
+          <div class="player-tip">Nick Foles</div>
+          <div class="player-body">
+            <div data-include="includes/body.svg"></div>
+          </div>
+          <div class="player-hair ">
+            <div class="hair svg"></div>
+          </div>
+          <div class="team">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
+          <div class="number">
+            9
+          </div>
         </div>
-        <div class="team">
-          <div data-include="includes/jersey.svg"></div>
+
+        <div class="relative Flacco">
+          <div class="player-tip">Joe Flacco</div>
+
+          <div class="player-body ">
+            <div data-include="includes/body.svg"></div>
+          </div>
+          <div class="player-hair ">
+            <div class="hair svg"></div>
+          </div>
+          <div class="team">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
+          <div class="number">
+            5
+          </div>
         </div>
-        <div class="number">
-          14
+
+        <div class="relative Taylor">
+          <div class="player-tip">Tyrod Taylor</div>
+          <div class="player-body">
+            <div data-include="includes/body.svg"></div>
+          </div>
+          <div class="player-hair ">
+            <div class="hair svg"></div>
+          </div>
+          <div class="team">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
+          <div class="number">
+            5
+          </div>
         </div>
-      </div>
 
 
-      <div class="relative Keenum">
-        <div class="player-tip">Case Keenum</div>
-        <div data-include="includes/player.html"></div>
-        <div class="player-hair ">
-          <div class="hair svg"></div>
+        <div class="relative Fitz">
+          <div class="player-tip">Ryan Fitzpatrick</div>
+          <div data-include="includes/player.html"></div>
+          <div class="player-hair ">
+            <div class="hair svg"></div>
+          </div>
+          <div class="team">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
+          <div class="number">
+            14
+          </div>
         </div>
-        <div class="team">
-          <div data-include="includes/jersey.svg"></div>
-        </div>
-        <div class="number">
-          4
-        </div>
-      </div>
-      <div class="relative Manning">
-        <div class="player-tip">Eli Manning</div>
-        <div data-include="includes/player.html"></div>
-        <div class="player-hair ">
-          <div class="hair svg"></div>
-        </div>
-        <div class="team">
-          <div data-include="includes/jersey.svg"></div>
-        </div>
-        <div class="number">
-          10
-        </div>
-      </div>
-
-      <div class="relative Bortles">
-        <div class="player-tip">Blake Bortles</div>
-        <div data-include="includes/player.html"></div>
-        <div class="player-hair ">
-          <div class="hair svg"></div>
-        </div>
-        <div class="team">
-          <div data-include="includes/jersey.svg"></div>
-        </div>
-        <div class="number">
-          5
-        </div>
-      </div>
-
-      <div class="relative Tannehill">
-        <div class="player-tip">Ryan Tannehill</div>
-        <div data-include="includes/player.html"></div>
-        <div class="player-hair ">
-          <div class="hair svg"></div>
-        </div>
-        <div class="team">
-          <div data-include="includes/jersey.svg"></div>
-        </div>
-        <div class="number">
-          17
-        </div>
-      </div>
-
-      <div class="relative Winston">
-        <div class="player-tip">Jameis Winston</div>
-        <div data-include="includes/player.html"></div>
-        <div class="player-hair ">
-          <div class="hair svg"></div>
-        </div>
-        <div class="team">
-          <div data-include="includes/jersey.svg"></div>
-        </div>
-        <div class="number">
-          3
-        </div>
-      </div>
 
 
-      <div class="relative McCoy">
-        <div class="player-tip">Colt McCoy</div>
-        <div data-include="includes/player.html"></div>
-        <div class="player-hair ">
-          <div class="hair svg"></div>
+        <div class="relative Keenum">
+          <div class="player-tip">Case Keenum</div>
+          <div data-include="includes/player.html"></div>
+          <div class="player-hair ">
+            <div class="hair svg"></div>
+          </div>
+          <div class="team">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
+          <div class="number">
+            4
+          </div>
         </div>
-        <div class="team">
-          <div data-include="includes/jersey.svg"></div>
+        <div class="relative Manning">
+          <div class="player-tip">Eli Manning</div>
+          <div data-include="includes/player.html"></div>
+          <div class="player-hair ">
+            <div class="hair svg"></div>
+          </div>
+          <div class="team">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
+          <div class="number">
+            10
+          </div>
         </div>
-        <div class="number">
-          12
+
+        <div class="relative Bortles">
+          <div class="player-tip">Blake Bortles</div>
+          <div data-include="includes/player.html"></div>
+          <div class="player-hair ">
+            <div class="hair svg"></div>
+          </div>
+          <div class="team">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
+          <div class="number">
+            5
+          </div>
         </div>
-      </div>
 
-
-      <div class="relative Carr">
-        <div class="player-tip">Derek Carr</div>
-        <div data-include="includes/player.html"></div>
-        <div class="player-hair ">
-          <div class="hair svg"></div>
+        <div class="relative Tannehill">
+          <div class="player-tip">Ryan Tannehill</div>
+          <div data-include="includes/player.html"></div>
+          <div class="player-hair ">
+            <div class="hair svg"></div>
+          </div>
+          <div class="team">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
+          <div class="number">
+            17
+          </div>
         </div>
-        <div class="team">
-          <div data-include="includes/jersey.svg"></div>
+
+        <div class="relative Winston">
+          <div class="player-tip">Jameis Winston</div>
+          <div data-include="includes/player.html"></div>
+          <div class="player-hair ">
+            <div class="hair svg"></div>
+          </div>
+          <div class="team">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
+          <div class="number">
+            3
+          </div>
         </div>
-        <div class="number">
-          4
+
+
+        <div class="relative McCoy">
+          <div class="player-tip">Colt McCoy</div>
+          <div data-include="includes/player.html"></div>
+          <div class="player-hair ">
+            <div class="hair svg"></div>
+          </div>
+          <div class="team">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
+          <div class="number">
+            12
+          </div>
         </div>
-      </div>
 
 
-
-
-
-
-
-
-
-    </div>
-
-
-
-    <div id="allteams">
-
-      <div class="relative">
-        <div class="team-tip">Free Agent</div>
-        <div class="fa">
-          <div data-include="includes/jersey.svg"></div>
+        <div class="relative Carr">
+          <div class="player-tip">Derek Carr</div>
+          <div data-include="includes/player.html"></div>
+          <div class="player-hair ">
+            <div class="hair svg"></div>
+          </div>
+          <div class="team">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
+          <div class="number">
+            4
+          </div>
         </div>
-      </div>
-      <div class="relative">
-        <div class="team-tip">Free Agent</div>
-        <div class="fa">
-          <div data-include="includes/jersey.svg"></div>
-        </div>
-      </div>
-      <div class="relative">
-        <div class="team-tip">Free Agent</div>
-        <div class="fa">
-          <div data-include="includes/jersey.svg"></div>
-        </div>
-      </div>
-      <div class="relative">
-        <div class="team-tip">Free Agent</div>
-        <div class="fa">
-          <div data-include="includes/jersey.svg"></div>
-        </div>
+
+
+
+
+
+
+
+
+
       </div>
 
 
 
-      <div class="relative">
-        <div class="team-tip">Broncos</div>
-        <div class="broncos">
-          <div data-include="includes/jersey.svg"></div>
+      <div id="allteams">
+
+        <div class="relative">
+          <div class="team-tip">Free Agent</div>
+          <div class="fa">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
         </div>
-      </div>
-      <div class="relative">
-        <div class="team-tip">Giants</div>
-        <div class="giants">
-          <div data-include="includes/jersey.svg"></div>
+        <div class="relative">
+          <div class="team-tip">Free Agent</div>
+          <div class="fa">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
         </div>
-      </div>
-      <div class="relative">
-        <div class="team-tip">Jaguars</div>
-        <div class="jaguars">
-          <div data-include="includes/jersey.svg"></div>
+        <div class="relative">
+          <div class="team-tip">Free Agent</div>
+          <div class="fa">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
         </div>
-      </div>
-      <div class="relative">
-        <div class="team-tip">Dolphins</div>
-        <div class="dolphins">
-          <div data-include="includes/jersey.svg"></div>
+        <div class="relative">
+          <div class="team-tip">Free Agent</div>
+          <div class="fa">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
         </div>
-      </div>
-      <div class="relative">
-        <div class="team-tip">Buccaneers</div>
-        <div class="Buccaneers">
-          <div data-include="includes/jersey.svg"></div>
-        </div>
-      </div>
-      <div class="relative">
-        <div class="team-tip">Redskins</div>
-        <div class="Redskins">
-          <div data-include="includes/jersey.svg"></div>
-        </div>
-      </div>
-      <div class="relative">
-        <div class="team-tip">Raiders</div>
-        <div class="Raiders">
-          <div data-include="includes/jersey.svg"></div>
-        </div>
-      </div>
 
 
 
+        <div class="relative">
+          <div class="team-tip">Broncos</div>
+          <div class="broncos">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="team-tip">Giants</div>
+          <div class="giants">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="team-tip">Jaguars</div>
+          <div class="jaguars">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="team-tip">Dolphins</div>
+          <div class="dolphins">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="team-tip">Buccaneers</div>
+          <div class="Buccaneers">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="team-tip">Redskins</div>
+          <div class="Redskins">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="team-tip">Raiders</div>
+          <div class="Raiders">
+            <div data-include="includes/jersey.svg"></div>
+          </div>
+        </div>
 
+
+
+      </div>
   </body>
 
 </html>
