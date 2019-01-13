@@ -123,8 +123,33 @@ select {
 }
 
 .Carr .hair {
-  background-image: url("../players/hair_Carr.svg");
+  background-image: url("../players/hair_carr.svg");
 }
+.Manning .hair {
+  background-image: url("../players/hair_manning.svg");
+}
+.Keenum .hair {
+  background-image: url("../players/hair_keenum.svg");
+}
+
+.Bortles .hair {
+  background-image: url("../players/hair_bortles.svg");
+}
+
+
+.McCoy .hair {
+  background-image: url("../players/hair_mccoy.svg");
+}
+
+.Winston .hair {
+  background-image: url("../players/hair_winston.svg");
+}
+
+.Fitz .hair {
+  background-image: url("../players/hair_fitz.svg");
+}
+
+
 
 .Foles .eyes {
   fill: #5d9aa8;
@@ -155,7 +180,7 @@ select {
 }
 
 .Taylor .skin {
-  fill: #b17147;
+  fill: #8e4d36;
 }
 
 .Carr .eyes {
@@ -165,6 +190,56 @@ select {
 .Carr .skin {
   fill: #edcbbe;
 }
+
+.Manning .eyes {
+  fill: #b17147;
+}
+
+.Manning .skin {
+  fill: #edcbbe;
+}
+
+.Keenum .eyes {
+  fill: #5d9aa8;
+}
+
+.Keenum .skin {
+  fill: #edcbbe;
+}
+
+.Bortles .eyes {
+  fill: #603813;
+}
+
+.Bortles .skin {
+  fill: #edcbbe;
+}
+
+.McCoy .eyes {
+  fill: #499bce;
+}
+
+.McCoy .skin {
+  fill: #edcbbe;
+}
+
+.Winston .eyes {
+  fill: #603813;
+}
+
+.Winston .skin {
+  fill: #8e4d36;
+}
+
+.Fitz .eyes {
+  fill: #499bce;
+}
+
+.Fitz .skin {
+  fill: #edcbbe;
+}
+
+
 
 /* default team */
 .secondary {
@@ -202,11 +277,11 @@ select {
 }
 
 .Jaguars .secondary {
-  fill: #282324;
+  fill: #006778;
 }
 
 .Jaguars .primary {
-  fill: #006778;
+  fill: #282324;
 }
 
 .Giants .secondary {
