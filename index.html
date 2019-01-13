@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html id="my-node-2">
 
 <head>
   <title>Quarterback Carousel</title>
   <link href="https://fonts.googleapis.com/css?family=Graduate" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="images/og.jpg" />
 
   <script type="text/javascript" src="js/jquery-1.7.2.js"></script>
   <script type="text/javascript" src="js/jquery.ui.core.js"></script>
@@ -15,11 +16,17 @@
 
 
   <script type="text/javascript" src="js/csi.min.js"></script>
-  <meta property="og:image" content="images/og.jpg" />
+
+
+    <script type="text/javascript" src="js/html2canvas.min.js"></script>
+
+
+
 
 
   <link rel="stylesheet" href="css/css.css">
   <style>
+  #my-node{height:500px;}
     .relative {
       transform: scale(0.5);
       width: 200px;
@@ -99,6 +106,19 @@
         color: white;
       }
     }
+
+    .clear{clear:both;}
+    #screenshot {position: absolute;
+    bottom: 0;
+  left:0;
+z-index: 1000;}
+    #screenshot canvas {width:200px!important;height:200px!important;}
+    #target{position: absolute;
+    bottom: 0;
+  right:0;
+z-index: 1000;
+padding:10px;
+font-size:20px;}
   </style>
 
 
@@ -161,7 +181,7 @@
 
   <head>
 
-  <body>
+  <body id="my-node">
     <div class="mobile">
       Use your laptop, dumbdumb.
     </div>
@@ -444,6 +464,25 @@
 
 
       </div>
+
+    <div class="clear"></div>
+
+    <a href="#" id="target">save</a>
+
+    <script>
+    $( "#target" ).click(function() {
+
+        html2canvas(document.body).then(function(canvas) {
+
+          document.getElementById('screenshot').appendChild(canvas);
+
+        });
+
+      });
+
+    </script>
+
+    <div id="screenshot"></div>
   </body>
 
 </html>

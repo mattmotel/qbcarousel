@@ -1,0 +1,333 @@
+.body {
+  width: 360px;
+}
+
+.relative {
+  position: relative;
+  width: 175px;
+  height: 290px;
+  margin: 20px auto 0 auto;
+}
+
+.jersey {
+  width: 175px;
+  height: 145px;
+  position: absolute;
+  top: 268px;
+  left: 2.5px;
+  z-index: 2;
+  transition: fill 1s;
+}
+
+.hair {
+  width: 130px;
+  height: 168.5px;
+  position: absolute;
+  top: -24.5px;
+  left: 25px;
+  z-index: 3;
+  background-size: 130px 168.5px;
+}
+
+.number {
+  font-family: 'Graduate', sans-serif;
+  position: absolute;
+  top: 382px;
+  left: 40.5px;
+  z-index: 4;
+  font-size: 70px;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+  width: 200px;
+  text-align: center;
+}
+
+.secondary,
+.primary {
+  stroke: #000;
+  stroke-miterlimit: 10;
+  stroke-width: 3px;
+}
+
+.skin {
+  fill: #cea98d;
+}
+
+.eyes {
+  fill: #737879;
+}
+
+.skin,
+.cls-7 {
+  stroke: #020202;
+  stroke-miterlimit: 10;
+}
+
+.skin,
+.cls-2,
+.cls-7 {
+  stroke-width: 3px;
+}
+
+.cls-2 {
+  fill: none;
+  stroke: #230100;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cls-3,
+.cls-7 {
+  fill: #fff;
+}
+
+.cls-5 {
+  fill: #020202;
+}
+
+.cls-6 {
+  fill: #fff;
+}
+
+
+
+/* players  */
+.Foles .hair {
+  background-image: url("../players/hair_foles.svg");
+}
+
+.Taylor .hair {
+  background-image: url("../players/hair_taylor.svg");
+}
+
+.Flacco .hair {
+  background-image: url("../players/hair_flacco.svg");
+}
+
+.Tannehill .hair {
+  background-image: url("../players/hair_tannehill.svg");
+}
+
+.Carr .hair {
+  background-image: url("../players/hair_carr.svg");
+}
+.Manning .hair {
+  background-image: url("../players/hair_manning.svg");
+}
+.Keenum .hair {
+  background-image: url("../players/hair_keenum.svg");
+}
+
+.Bortles .hair {
+  background-image: url("../players/hair_bortles.svg");
+}
+
+
+.McCoy .hair {
+  background-image: url("../players/hair_mccoy.svg");
+}
+
+.Winston .hair {
+  background-image: url("../players/hair_winston.svg");
+}
+
+.Fitz .hair {
+  background-image: url("../players/hair_fitz.svg");
+}
+
+.Dalton .hair {
+  background-image: url("../players/hair_dalton.svg");
+}
+
+
+
+
+
+.Foles .eyes {
+  fill: #5d9aa8;
+}
+
+.Foles .skin {
+  fill: #edcbbe;
+}
+
+.Tannehill .eyes {
+  fill: #499bce;
+}
+
+.Tannehill .skin {
+  fill: #edcbbe;
+}
+
+.Flacco .eyes {
+  fill: #5d9aa8;
+}
+
+.Flacco .skin {
+  fill: #e2bdac;
+}
+
+.Taylor .eyes {
+  fill: #737879;
+}
+
+.Taylor .skin {
+  fill: #8e4d36;
+}
+
+.Carr .eyes {
+  fill: #499bce;
+}
+
+.Carr .skin {
+  fill: #edcbbe;
+}
+
+.Manning .eyes {
+  fill: #b17147;
+}
+
+.Manning .skin {
+  fill: #edcbbe;
+}
+
+.Keenum .eyes {
+  fill: #5d9aa8;
+}
+
+.Keenum .skin {
+  fill: #edcbbe;
+}
+
+.Bortles .eyes {
+  fill: #603813;
+}
+
+.Bortles .skin {
+  fill: #edcbbe;
+}
+
+.McCoy .eyes {
+  fill: #499bce;
+}
+
+.McCoy .skin {
+  fill: #edcbbe;
+}
+
+.Winston .eyes {
+  fill: #603813;
+}
+
+.Winston .skin {
+  fill: #8e4d36;
+}
+
+.Fitz .eyes {
+  fill: #499bce;
+}
+
+.Fitz .skin {
+  fill: #edcbbe;
+}
+
+.Dalton .eyes {
+  fill: #499bce;
+}
+
+.Dalton .skin {
+  fill: #edcbbe;
+}
+
+
+/* default team */
+.secondary {
+  fill: #444444;
+}
+
+.primary {
+  fill: #666666;
+}
+
+
+.fa .secondary {
+  fill: #444444;
+}
+
+.fa .primary {
+  fill: #666666;
+}
+
+/* team */
+.Eagles .secondary {
+  fill: #A5ACAF;
+}
+
+.Eagles .primary {
+  fill: #004C54;
+}
+
+.Redskins .secondary {
+  fill: #ffbb00;
+}
+
+.Redskins .primary {
+  fill: #880000;
+}
+
+.Jaguars .secondary {
+  fill: #006778;
+}
+
+.Jaguars .primary {
+  fill: #282324;
+}
+
+.Giants .secondary {
+  fill: #1337a8;
+}
+
+.Giants .primary {
+  fill: #1337a8;
+}
+
+.Broncos .secondary {
+  fill: #ff4500;
+}
+
+.Broncos .primary {
+  fill: #001e55;
+}
+
+.Dolphins .secondary {
+  fill: #ff3c00;
+}
+
+.Dolphins .primary {
+  fill: #00899f;
+}
+
+.Bengals .secondary {
+  fill: #000000;
+}
+
+.Bengals .primary {
+  fill: #FB4F14;
+}
+
+.Buccaneers .secondary {
+  fill: #34302B;
+}
+
+.Buccaneers .primary {
+  fill: #D50A0A;
+}
+
+.Raiders .secondary {
+  fill: #A5ACAF;
+}
+
+.Raiders .primary {
+  fill: #000000;
+}
